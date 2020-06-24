@@ -14,6 +14,7 @@ function skeleton_features () {
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'post-thumbnails' );
     add_image_size( 'portfilio-thumbnail', 600, 325 );
+    add_image_size( 'news-thumbnail', 600, 325 );
 }
 add_action('after_setup_theme','skeleton_features');
 
