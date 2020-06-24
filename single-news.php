@@ -14,7 +14,7 @@
 
         <hr>
 
-        <h1 class="mt-4"><?php the_title(); ?></h1>
+        <h1 class="content-header mt-4"><?php the_title(); ?></h1>
         <p class="lead">By <a href="#"><?php echo get_the_author(); ?></a></p>
 
         <hr>
