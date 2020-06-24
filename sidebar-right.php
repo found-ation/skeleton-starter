@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Sidebar Right
-Template Post Type: post, page, portfolio, news
+Template Post Type: post, page, portfolio, news, documents
 */
 
   get_header();

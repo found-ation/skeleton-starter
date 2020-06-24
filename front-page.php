@@ -15,7 +15,7 @@
           the_excerpt();
           } else {
           echo wp_trim_words(get_the_content(),33);
-          } ?>     	
+          } ?>      
       </p>
       <a href="<?php the_permalink() ?>" class="btn btn-primary btn-lg">Call to action!</a>
     </header>
@@ -24,21 +24,22 @@
     <div class="row text-center">
     <?php 
     $homepageContent = new WP_Query(array(
-    'posts_per_page' => 4,
+    'posts_per_page' => 6,
     'post_type' => 'portfolio'
     ));
     while($homepageContent->have_posts()) {
     $homepageContent->the_post(); ?>
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-6 col-md-6 mb-4">
         <div class="card h-100">
-          <span class="card-img-top image-contained"><?php the_post_thumbnail( 'portfilio-thumbnail' ); ?></span>
+            <span class="img-fluid rounded image-contained mb-3"><?php the_post_thumbnail( 'portfolio-thumbnail' ); ?></span>
+            <div class="date_holder"><span class="day"><?php the_time('j'); ?></span><span class="month"><?php the_time('F'); ?></span></div>
           <div class="card-body">
             <h4 class="card-title"><?php the_title(); ?></h4>
             <p class="card-text">
           <?php if (has_excerpt()) {
           the_excerpt();
           } else {
-          echo wp_trim_words(get_the_content(),12);
+          echo wp_trim_words(get_the_content(),60);
           } ?>
             </p>
           </div>
@@ -49,8 +50,8 @@
       </div>
       <?php } ?>
     </div>
-      
-	<hr class="specialHr">
+    
+  <hr class="specialHr">
     <?php 
     $homepageContent = new WP_Query(array(
     'posts_per_page' => 1,
@@ -67,22 +68,23 @@
           } else {
           echo wp_trim_words(get_the_content(),50);
           } ?>
-		 <p>
-		  <a href="<?php the_permalink() ?>" class="btn btn-primary">Read More!</a>
-		  </p>
-	    </p>
+     <p>
+      <a href="<?php the_permalink() ?>" class="btn btn-primary">Read More!</a>
+      </p>
+      </p>
       </div>
       <div class="col-md-5">
-		  <?php the_post_thumbnail( 'news-thumbnail' ); ?>
+            <span class="img-fluid rounded image-contained mb-3"><?php the_post_thumbnail( 'news-thumbnail' ); ?></span>
+            <div class="date_holder"><span class="day"><?php the_time('j'); ?></span><span class="month"><?php the_time('F'); ?></span></div>
       </div>
-	<?php } ?>
+  <?php } ?>
     </div>
 
-    <div class="card text-white bg-success my-5 py-4 text-center">
-       <div class="card-body">
-          <p class="lead text-white m-0">This is a perfect eye catching box to market your product or services.</p>
-       </div>
-    </div>
+         <div class="card text-white bg-success my-5 py-4 text-center">
+            <div class="card-body">
+              <p class="lead text-white m-0">This is a perfect eye catching box to market your product or services.</p>
+            </div>
+         </div>
 
     <hr class="featurette-divider">
     
@@ -105,7 +107,7 @@
     <a href="<?php the_permalink() ?>" class="btn btn-lg btn-outline-primary mb-3">Browse themes</a>
   </div>
   <?php } ?>
-  </div>     
+  </div>
 
 </div>
 

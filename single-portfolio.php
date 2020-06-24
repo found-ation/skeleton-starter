@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php 
+
+/*
+Template Name: Full Width
+Template Post Type: portfolio
+*/
+
+get_header(); ?>
 
 	<?php
 	while (have_posts()){
@@ -9,7 +16,8 @@
     <div class="row">
       <div class="col-lg-12 mt-5">
 
-        <span class="img-fluid rounded image-contained"><?php the_post_thumbnail(); ?></span>
+      <span class="img-fluid rounded image-contained mb-3"><?php the_post_thumbnail(); ?></span>
+      <div class="date_holder"><span class="day"><?php the_time('j'); ?></span><span class="month"><?php the_time('F'); ?></span></div>
 
         <hr>
 

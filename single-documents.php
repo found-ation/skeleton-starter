@@ -2,10 +2,12 @@
 
 /*
 Template Name: Full Width
-Template Post Type: page
+Template Post Type: documents
 */
-get_header();
 
+get_header(); ?>
+
+	<?php
 	while (have_posts()){
 		the_post(); 
 	?>
@@ -27,13 +29,9 @@ get_header();
         <p>Posted: <?php the_date(get_option('date_format')); ?></p>
 
         <?php 
-	      the_content(); 
+	    the_content(); 
 	       }; 
-	      ?>
-
-      <hr class="specialHr">
-
-      <?php comment_form(); ?>
+	    ?>
         
       </div>
     </div>
