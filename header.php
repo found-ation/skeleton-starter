@@ -11,7 +11,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <span class="navbar-brand float-left">
+      <span class="navbar-brand">
       <?php if( has_custom_logo() ) { 
       the_custom_logo();
       } else { ?>
