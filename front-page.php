@@ -39,7 +39,7 @@
           <?php if (has_excerpt()) {
           the_excerpt();
           } else {
-          echo wp_trim_words(get_the_content(),60);
+          echo wp_trim_words(get_the_content(),90);
           } ?>
             </p>
           </div>
