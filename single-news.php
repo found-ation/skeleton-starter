@@ -25,7 +25,7 @@
 	    the_content(); 
 	       }; 
 	    ?>
-        
+        <hr class="specialHr">
       </div>
     </div>
   </div>
