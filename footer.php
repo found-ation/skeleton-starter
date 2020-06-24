@@ -43,7 +43,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                                        <div class="text-uppercase-expanded text-xs mb-4 text-white lead">Docs</div>
+                                        <div class="text-uppercase-expanded text-xs mb-4 text-white lead">News</div>
                                         <ul class="list-unstyled mb-0">
                                             <?php 
                                             $homepageEvents = new WP_Query(array(
@@ -57,12 +57,12 @@
                                         </ul>
                                     </div>
                                     <div class="col-lg-3 col-md-6">
-                                        <div class="text-uppercase-expanded text-xs mb-4 text-white lead">Pages</div>
+                                        <div class="text-uppercase-expanded text-xs mb-4 text-white lead">Docs</div>
                                         <ul class="list-unstyled mb-0">
                                             <?php 
                                             $homepageEvents = new WP_Query(array(
                                             'posts_per_page' => 8,
-                                            'post_type' => 'document'
+                                            'post_type' => 'documents'
                                             ));
                                             while($homepageEvents->have_posts()) {
                                             $homepageEvents->the_post(); ?>                                          
