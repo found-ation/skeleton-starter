@@ -29,7 +29,7 @@
     ));
     while($homepageContent->have_posts()) {
     $homepageContent->the_post(); ?>
-      <div class="col-lg-6 col-md-6 mb-4">
+      <div class="col-lg-4 col-md-4 mb-4">
         <div class="card h-100">
             <span class="img-fluid rounded image-contained mb-3"><?php the_post_thumbnail( 'portfolio-thumbnail' ); ?></span>
             <div class="date_holder"><span class="day"><?php the_time('j'); ?></span><span class="month"><?php the_time('F'); ?></span></div>

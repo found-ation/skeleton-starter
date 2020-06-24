@@ -26,8 +26,6 @@ get_header(); ?>
 
         <hr>
 
-        <p>Posted: <?php the_date(get_option('date_format')); ?></p>
-
         <?php 
 	    the_content(); 
 	       }; 
