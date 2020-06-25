@@ -25,9 +25,14 @@
         <a class="btn btn-primary mt-3" href="<?php the_permalink() ?>">Read more</a>       
       </div>
       <hr class="specialHr">
-      <?php endwhile;            
+      
+      <?php endwhile; ?> 
 
-      endif; ?> 
+      <ul class="pagination pagination-lg"> 
+        <?php echo paginate_links();?>
+      </ul>           
+
+      <?php endif; ?> 
     </div>
   </div>
 

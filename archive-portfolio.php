@@ -28,9 +28,14 @@
         <hr class="specialHr">
       </div>
       
-      <?php endwhile;            
+      <?php endwhile; ?> 
 
-      endif; ?>     
+      <ul class="pagination pagination-lg"> 
+        <?php echo paginate_links();?>
+      </ul>           
+
+      <?php endif; ?>
+         
     </div>
   </div>
 

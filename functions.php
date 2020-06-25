@@ -60,6 +60,20 @@ function skeleton_sidebar() {
     );
 }
 
+add_action( 'widgets_init', 'blurb_sidebar' );
+
+function blurb_sidebar() {
+    register_sidebar(
+        array(
+            'id'            => 'blurb',
+            'name'          => __( 'Blurb Section' ),
+            'description'   => __( 'See Blurb guide for more information.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s mt-5">',
+            'after_widget'  => '</div>',
+        )
+    );
+}
+
 function skeleton_post_query( $args = array() ) {
 
   $args['post_type'] = 'downloads';

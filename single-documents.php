@@ -37,6 +37,13 @@ get_header(); ?>
     </div>
   </div>
 
-  <?php get_template_part('template-parts/blurb-info'); ?>
+       <div class="container bg-gray-100 py-5 px-3 px-lg-5 rounded-lg shadow-sm">
+        <div class="row">
+
+          <?php dynamic_sidebar( 'blurb' ); ?>
+
+        </div>
+       </div>
+
 
 <?php get_footer(); ?>
