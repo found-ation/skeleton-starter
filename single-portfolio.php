@@ -21,17 +21,17 @@ get_header(); ?>
 
         <hr>
 
-        <h1 class="mt-4"><?php the_title(); ?></h1>
+        <h1 class="content-header mt-4"><?php the_title(); ?></h1>
         <p class="lead">By <a href="#"><?php echo get_the_author(); ?></a></p>
 
         <hr>
-
-        <p>Posted: <?php the_date(get_option('date_format')); ?></p>
 
         <?php 
 	    the_content(); 
 	       }; 
 	    ?>
+
+      <hr class="specialHr">
         
       </div>
     </div>

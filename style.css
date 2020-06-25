@@ -17,3 +17,30 @@ Text Domain: skeleton-starter
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700;900&display=swap');
 
 .alignnone{margin:5px 20px 20px 0}.aligncenter,div.aligncenter{display:block;margin:5px auto 5px auto}.alignright{float:right;margin:5px 0 20px 20px}.alignleft{float:left;margin:5px 20px 20px 0}a img.alignright{float:right;margin:5px 0 20px 20px}a img.alignnone{margin:5px 20px 20px 0}a img.alignleft{float:left;margin:5px 20px 20px 0}a img.aligncenter{display:block;margin-left:auto;margin-right:auto}.wp-caption{background:#fff;border:1px solid #f0f0f0;max-width:96%;padding:5px 3px 10px;text-align:center}.wp-caption.alignnone{margin:5px 20px 20px 0}.wp-caption.alignleft{margin:5px 20px 20px 0}.wp-caption.alignright{margin:5px 0 20px 20px}.wp-caption img{border:0 none;height:auto;margin:0;max-width:98.5%;padding:0;width:auto}.wp-caption p.wp-caption-text{font-size:11px;line-height:17px;margin:0;padding:0 4px 5px}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#eee;clip:auto!important;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}.fixed-top{position:relative!important}.menu-text a{color:#fff}body{font-family:Raleway,san serif!important;font-size:17px}.navbar ul a{color:#fff;text-decoration:none;list-style:none}.navbar-brand li a{color:#fff;text-decoration:none}.specialHr{width:100%;background-color:#e53359!important;color:#e53359!important;border:solid 2px #e53359!important;height:2px!important;margin-top:25px}.footerHr{width:100%;background-color:#343a40!important;color:#343a40!important;border:solid 2px #343a40!important;height:2px!important;margin-top:25px}.image-contained{height:auto;overflow:hidden;float:left;height:auto}.page-title{color:#000;border-bottom:2px solid #e53359;margin:2rem 0 2rem 0}footer{color:#fff}a:hover,footer li{color:#e53359!important;text-decoration:none!important}#comment{float:left;width:100%}#submit{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;color:#fff;background-color:#007bff;border-color:#007bff;margin-top:15px}#searchsubmit{display:none}.jumbotron-header{padding:4rem 2rem}.jumbotron-header{background-color:#fff;border-radius:.125rem;-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)}ul.navbar-nav{float:right;}span.navbar-brand{float:left;}.current-menu-item{border-bottom:2px solid #e53359}.menu-item-object-custom,.menu-item-object-marketing,.menu-item-type-post_type{margin-right:1rem}.date_holder{position:absolute;top:10px;right:25px;background:#f7f7f7;color:#2e2e2e;padding:0;text-align:center}.date_holder .day{display:block;font-size:20px;margin-bottom:2px;font-weight:700;padding:4px 12px}.date_holder .month{display:block;text-transform:uppercase;font-size:13px;font-weight:700;background:#d14242;color:#fff}#s{display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}.sub-title{color: #000000;border-bottom: 1px solid #000000;margin: 2rem 0 2rem 0;}.main-title {color: #000000;border-bottom: 3px solid #e53359;margin: 2rem 0 2rem 0;}.content-header {color: #000000;border-bottom: 3px solid #007bff;margin: 2rem 0 2rem 0;}pre {background: #ccc;border: 1px solid #484848;border-radius: 5px;padding: 1rem;}
+
+.medium {
+	width:600px;
+	height:200px;
+}
+
+.page-numbers {
+	margin-right:1rem;
+	font-size":18px;
+}
+
+.page-numbers .current {
+	margin-right:1rem;
+	font-size":18px;
+}
+
+.next  {
+	display:none;
+}
+
+.prev  {
+	display:none;
+}
+
+ul .page-numbers {
+	font-size: 25px;
+}

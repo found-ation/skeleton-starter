@@ -29,17 +29,17 @@
     ));
     while($homepageContent->have_posts()) {
     $homepageContent->the_post(); ?>
-      <div class="col-lg-4 col-md-4 mb-4">
+      <div class="col-lg-6 col-md-6 mb-4">
         <div class="card h-100">
-            <span class="img-fluid rounded image-contained mb-3"><?php the_post_thumbnail( 'portfolio-thumbnail' ); ?></span>
+            <span class="img-fluid rounded image-contained mb-3"><?php the_post_thumbnail( 'medium', array( 'class' => 'medium', 'data-id' => 1000 ) ); ?></span>
             <div class="date_holder"><span class="day"><?php the_time('j'); ?></span><span class="month"><?php the_time('F'); ?></span></div>
           <div class="card-body">
             <h4 class="card-title"><?php the_title(); ?></h4>
-            <p class="card-text">
+            <p class="card-text text-left">
           <?php if (has_excerpt()) {
           the_excerpt();
           } else {
-          echo wp_trim_words(get_the_content(),90);
+          echo wp_trim_words(get_the_content(),45);
           } ?>
             </p>
           </div>

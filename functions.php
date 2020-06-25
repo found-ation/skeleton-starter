@@ -15,6 +15,8 @@ function skeleton_features () {
     add_theme_support( 'post-thumbnails' );
     add_image_size( 'portfilio-thumbnail', 600, 325 );
     add_image_size( 'news-thumbnail', 600, 325 );
+    add_image_size( 'marketing-thumbnail', 600, 325 );
+    add_image_size( 'documents-thumbnail', 600, 325 );
 }
 add_action('after_setup_theme','skeleton_features');
 
@@ -59,8 +61,9 @@ function skeleton_sidebar() {
 
 function skeleton_post_query( $args = array() ) {
 
-        $args['post_type'] = 'downloads';
+    $args['post_type'] = 'downloads';
 	$args['post_type'] = 'documents';
+    $args['post_type'] = 'news';
 	$args['post_type'] = 'post';
 	$args['post_type'] = 'page';
 
@@ -69,6 +72,20 @@ function skeleton_post_query( $args = array() ) {
 }
 
 add_filter( 'query_make_posts', 'skeleton_post_query', 12, 1 );
+
+function author_custom_post_types( $query ) {
+  if( is_author() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'portfolio',
+     'post', 'news',
+     'post', 'documents',   
+     'post', 'post',
+     'post', 'page'
+        ));
+      return $query;
+    }
+}
+add_filter( 'pre_get_posts', 'author_custom_post_types' );
 
 if ( !function_exists( 'skeleton_pagination' ) ) {
   
@@ -102,3 +119,15 @@ if ( !function_exists( 'skeleton_pagination' ) ) {
   }
   
 }
+
+// Profile Image
+
+add_filter( 'avatar_defaults', 'wpb_new_gravatar' );
+function wpb_new_gravatar ($avatar_defaults) {
+$myavatar = 'http://localhost/git/wp-content/uploads/2020/06/profile.jpg';
+$avatar_defaults[$myavatar] = "Default Gravatar";
+return $avatar_defaults;
+}
+
+
+

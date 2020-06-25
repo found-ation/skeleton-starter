@@ -26,8 +26,11 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
                   <p class="posted-on"><small><strong>Posted on: <?php the_time('d M Y'); ?></strong></small></p> 
                   <?php the_excerpt(); ?>
                 <a class="btn btn-primary" href="<?php the_permalink() ?>">More <i class="fas fa-angle-double-right"></i></a> 
-               </div> 
+               </div>
+               <hr class="specialHr">
                <?php endwhile;?>
+
+               
 
 	       <ul class="pagination pagination-lg"> 
 	          <?php echo paginate_links();?>
