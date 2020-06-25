@@ -21,8 +21,8 @@
       <button id="site-navigation" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>     
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-         <ul class="navbar-nav ml-auto">
+      <div class="collapse navbar-collapse dropdown" id="navbarResponsive">
+         <ul class="navbar-nav ml-auto dropdown">
           <?php
     if ( has_nav_menu( 'primary' ) ) {
 

@@ -57,66 +57,49 @@ ul .page-numbers {
     border-radius: 2px;
 }
 
-
-
-/* MEGA MENU */
-
-/* Media Object */
-.media {
-  display: flex;
-  align-items: flex-start;
-}
-.media-figure {
-  margin-right: 1em;
-}
-.media-body {
-  flex: 1;
+ /* Dropdown Button */
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor:pointer;
 }
 
-@media screen and (min-width: 600px){
-    .has-mega-menu{
-        position:static;
-    }
-    li.has-mega-menu .sub-menu {
-        width: 100%;
-        position: absolute;
-        top: NNpx; /*insert the needed value*/
-        z-index: 100;
-        left:0px;
-        right:0px;
-    }
-    li.has-mega-menu:hover>.sub-menu{
-    /*flexbox fallback for browsers that do not support CSS GRID lyout*/
-        display: flex;
-        flex-wrap: wrap;
-    /*CSS GRID lyout*/ 
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(50%, 1fr));   
-    }
-}
-@media screen and (min-width: 992px){
-    li.has-mega-menu:hover>.sub-menu{grid-template-columns: repeat(auto-fit,minmax(33.3333%, 1fr)); }
-}
-@media screen and (min-width: 1200px){
-    li.has-mega-menu:hover>.sub-menu{grid-template-columns: repeat(auto-fit,minmax(25%, 1fr)); }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-@media screen and (min-width: 600px){
-    li.mega-menu-column {
-        width: 100%;
-        max-width: 100%;
-        min-height: 1px;
-        padding: 10px 25px;
-        flex: 1 0 calc(50%);
-    }
-}
-@media screen and (min-width: 992px){
-    li.mega-menu-column {flex: 1 0 calc(33.333%);}
-}
-@media screen and (min-width: 1200px){
-    li.mega-menu-column {flex: 1 0 calc(25%);}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left:2.5rem;
 }
 
-.mega-menu-column img {
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #000000;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {}
+
+.padding-none {
+  padding: 0;
+  margin-left: -2.3rem;
 }
