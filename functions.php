@@ -6,6 +6,7 @@ function skeleton_scripts() {
     wp_enqueue_style( 'grid_style', get_template_directory_uri() . '/css/bootstrap-grid.min.css' );
     wp_enqueue_style( 'reboot_style', get_template_directory_uri() . '/css/bootstrap-reboot.min.css' );
     wp_enqueue_script( 'bootrap_script', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'init_script', get_template_directory_uri() . '/js/init.js' );
 }
 add_action( 'wp_enqueue_scripts', 'skeleton_scripts' );
 
@@ -61,9 +62,9 @@ function skeleton_sidebar() {
 
 function skeleton_post_query( $args = array() ) {
 
-    $args['post_type'] = 'downloads';
+  $args['post_type'] = 'downloads';
 	$args['post_type'] = 'documents';
-    $args['post_type'] = 'news';
+  $args['post_type'] = 'news';
 	$args['post_type'] = 'post';
 	$args['post_type'] = 'page';
 
@@ -118,15 +119,6 @@ if ( !function_exists( 'skeleton_pagination' ) ) {
     }
   }
   
-}
-
-// Profile Image
-
-add_filter( 'avatar_defaults', 'wpb_new_gravatar' );
-function wpb_new_gravatar ($avatar_defaults) {
-$myavatar = 'http://localhost/git/wp-content/uploads/2020/06/profile.jpg';
-$avatar_defaults[$myavatar] = "Default Gravatar";
-return $avatar_defaults;
 }
 
 
