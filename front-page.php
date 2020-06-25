@@ -52,6 +52,7 @@
     </div>
     
   <hr class="specialHr">
+  <h1 class="content-header mt-4">Latest News</h1>
     <?php 
     $homepageContent = new WP_Query(array(
     'posts_per_page' => 1,
@@ -81,6 +82,7 @@
     </div>
 
   <hr class="specialHr">
+    <h1 class="content-header mt-4">Latest Docs</h1>
     <?php 
     $homepageContent = new WP_Query(array(
     'posts_per_page' => 1,
