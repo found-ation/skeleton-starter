@@ -20,7 +20,7 @@ Still a little way to go before Skeleton is complete, it looks great, installs f
 The following guides provide detailed information on the various plugins that accompany Skeleton.
 
 * [Installation Guide](https://skeletontheme.club/documents/installation-guide/)
-* [Setup Guide[(https://skeletontheme.club/documents/setup-guide/)
+* [Setup Guide](https://skeletontheme.club/documents/setup-guide/)
 * [iDevice Toolbar](https://skeletontheme.club/portfolio/idevice-toolbar/)
 * [Author Profile](https://skeletontheme.club/portfolio/custom-author-bio/)
 * [Guides Index](https://skeletontheme.club/documents/guides-index/)
