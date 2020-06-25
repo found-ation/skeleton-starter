@@ -1,9 +1,10 @@
-# skeleton-theme
-Bootstrap 4.5 styles WordPress theme
+# skeleton theme
 
-Skeleton was created as a companion to the guide [Create a WordPress Theme](https://leemiller.club/documents/create-a-wordpress-theme-guide/), with the aim to help newcomers to WordPress create themes, rather than use page builders. You can view the demo on the [here](https://skeletontheme.club/).
+Bootstrap 4.5 styled WordPress theme
 
-When downloading this repo, note that the custom post type plugin is in the mu-plugin folder, so you'll need to move this folder to wp-content.
+Skeleton was created as a companion to the guide [Create a WordPress Theme](https://leemiller.club/documents/create-a-wordpress-theme-guide/), with the aim to help newcomers to WordPress create themes, rather than use page builders. You can view the demo [here](https://skeletontheme.club/).
+
+When downloading this repo, note that there are two plugins included, a custom post type plugin and the idevice toolbar, both can be download on my repos. Simply download as a zipped file and install as a plugin in Plugins >> Add new >> upload, install and activate. Once done refer to the demo site documentation.
 
 ## Installation
 
