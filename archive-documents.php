@@ -15,8 +15,6 @@
 
         <hr>
 
-        <p>Posted on <?php the_date(get_option('date_format')); ?></p>
-
         <p>
           <?php if (has_excerpt()) {
           the_excerpt();
@@ -28,9 +26,13 @@
         <hr class="specialHr">
       </div>
       
-      <?php endwhile;            
+      <?php endwhile; ?> 
 
-      endif; ?>     
+      <ul class="pagination pagination-lg"> 
+        <?php echo paginate_links();?>
+      </ul>           
+
+      <?php endif; ?>     
     </div>
   </div>
 
