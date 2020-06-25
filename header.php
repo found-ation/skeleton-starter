@@ -21,18 +21,17 @@
       <button id="site-navigation" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>     
       </button>
-      <div class="collapse navbar-collapse dropdown" id="navbarResponsive">
-         <ul class="navbar-nav ml-auto dropdown">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav ml-auto">
           <?php
     if ( has_nav_menu( 'primary' ) ) {
 
-      wp_nav_menu(
-        array(
-          'container'  => '',
-          'items_wrap' => '%3$s',
-          'theme_location' => 'primary',
-          )
-        );
+    wp_nav_menu(array(
+      'menu' => 'Main Menu',
+      'theme_location' => 'primary', 
+      'container_id' => 'cssmenu', 
+      'walker' => new CSS_Menu_Walker()
+    ));
 
       } elseif ( ! has_nav_menu( 'expanded' ) ) {
 
