@@ -17,7 +17,7 @@
           echo wp_trim_words(get_the_content(),33);
           } ?>      
       </p>
-      <a href="<?php the_permalink() ?>" class="btn btn-primary btn-lg">Call to action!</a>
+      <a href="<?php the_permalink() ?>" class="btn btn-primary btn-lg">Read more!</a>
     </header>
     <?php } ?>
 
@@ -56,6 +56,35 @@
     $homepageContent = new WP_Query(array(
     'posts_per_page' => 1,
     'post_type' => 'news'
+    ));
+    while($homepageContent->have_posts()) {
+    $homepageContent->the_post(); ?>
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading"><?php the_title(); ?></h2>
+        <p class="lead">
+          <?php if (has_excerpt()) {
+          the_excerpt();
+          } else {
+          echo wp_trim_words(get_the_content(),50);
+          } ?>
+     <p>
+      <a href="<?php the_permalink() ?>" class="btn btn-primary">Read More!</a>
+      </p>
+      </p>
+      </div>
+      <div class="col-md-5">
+            <span class="img-fluid rounded image-contained mb-3"><?php the_post_thumbnail( 'news-thumbnail' ); ?></span>
+            <div class="date_holder"><span class="day"><?php the_time('j'); ?></span><span class="month"><?php the_time('F'); ?></span></div>
+      </div>
+  <?php } ?>
+    </div>
+
+  <hr class="specialHr">
+    <?php 
+    $homepageContent = new WP_Query(array(
+    'posts_per_page' => 1,
+    'post_type' => 'documents'
     ));
     while($homepageContent->have_posts()) {
     $homepageContent->the_post(); ?>
