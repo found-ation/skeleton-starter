@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php 
+
+/*
+Template Name: Full Width
+Template Post Type: news
+*/
+
+get_header(); ?>
 
 	<?php
 	while (have_posts()){
