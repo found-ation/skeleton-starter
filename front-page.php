@@ -82,6 +82,7 @@
     </div>
 
   <hr class="specialHr">
+
     <h1 class="content-header mt-4">Latest Docs</h1>
     <?php 
     $homepageContent = new WP_Query(array(
@@ -110,6 +111,39 @@
       </div>
   <?php } ?>
     </div>
+
+  <hr class="specialHr">
+
+        <div class="container">
+          <div class="row gap-y">
+                <?php 
+                  $homepageContent = new WP_Query(array(
+                  'posts_per_page' => 6,
+                  'post_type' => 'articles'
+                  ));
+                  while($homepageContent->have_posts()) {
+                  $homepageContent->the_post(); ?>
+            <div class="col-md-6 col-lg-4">
+              <div class="card d-block border hover-shadow-6 mb-6">
+                <span class="card-img-top image-contained mb-3"><?php the_post_thumbnail( 'news-thumbnail' ); ?></span>
+                <div class="date_holder"><span class="day"><?php the_time('j'); ?></span><span class="month"><?php the_time('F'); ?></span></div>
+                <div class="p-6 text-center">
+                  <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#">News</a></p>
+                  <h5 class="mb-0"><a class="text-dark" href="#">
+                    <?php if (has_excerpt()) {
+                    the_excerpt();
+                    } else {
+                    echo wp_trim_words(get_the_content(),50);
+                    } ?>                  
+                  </a>
+                </h5>
+                </div>
+              </div>
+
+            </div>
+           <?php } ?>
+          </div>
+        </div>
 
          <div class="card text-white bg-success my-5 py-4 text-center">
             <div class="card-body">

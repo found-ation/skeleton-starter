@@ -38,6 +38,4 @@ get_header(); ?>
   </div>
             
 
-<?php dynamic_sidebar( 'blurb' ); ?>
-
 <?php get_footer(); ?>

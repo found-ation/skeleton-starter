@@ -37,4 +37,14 @@ get_header(); ?>
     </div>
   </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mt-5">
+
+      <?php dynamic_sidebar( 'blurb' ); ?>
+
+      </div>
+    </div>
+  </div>
+
 <?php get_footer(); ?>
