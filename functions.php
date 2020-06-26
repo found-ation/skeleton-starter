@@ -18,6 +18,7 @@ function skeleton_features () {
     add_image_size( 'news-thumbnail', 600, 325 );
     add_image_size( 'marketing-thumbnail', 600, 325 );
     add_image_size( 'documents-thumbnail', 600, 325 );
+    add_image_size( 'articles-thumbnail', 600, 325 );
 }
 add_action('after_setup_theme','skeleton_features');
 
@@ -76,11 +77,12 @@ function blurb_sidebar() {
 
 function skeleton_post_query( $args = array() ) {
 
-  $args['post_type'] = 'downloads';
+  $args['post_type'] = 'portfolio';
 	$args['post_type'] = 'documents';
   $args['post_type'] = 'news';
 	$args['post_type'] = 'post';
 	$args['post_type'] = 'page';
+  $args['post_type'] = 'articles';
 
     return $args;
 
@@ -95,7 +97,8 @@ function author_custom_post_types( $query ) {
      'post', 'news',
      'post', 'documents',   
      'post', 'post',
-     'post', 'page'
+     'post', 'page',
+     'post', 'articles',
         ));
       return $query;
     }

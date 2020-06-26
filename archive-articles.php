@@ -34,6 +34,9 @@ get_header(); ?>
         <hr class="specialHr">
 
       </div>
+          <ul class="pagination pagination-lg"> 
+            <?php echo paginate_links();?>
+         </ul>
     </div>
   </div>
             

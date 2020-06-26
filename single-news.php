@@ -38,12 +38,39 @@ get_header(); ?>
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 mt-5">
+      <div class="col-lg-12 blurb-margin">
 
       <?php dynamic_sidebar( 'blurb' ); ?>
 
       </div>
     </div>
   </div>
+
+        <hr class="specialHr">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+     <?php comment_form(); ?>
+
+      <?php
+        $args = array(
+            'date_query' => array(
+                'after' => '26 weeks ago',
+                'before' => 'tomorrow',
+                'inclusive' => true,
+                'title_reply' => __( 'Ask a Question or Comment', 'skeleton-starter' ),
+            ),
+        );
+         
+        $comments = get_comments( $args );
+        foreach ( $comments as $comment ) {
+        }
+      ?>
+
+      </div>
+    </div>
+  </div> 
 
 <?php get_footer(); ?>
