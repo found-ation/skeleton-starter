@@ -45,6 +45,8 @@ get_header(); ?>
 
       <?php dynamic_sidebar( 'blurb' ); ?>
 
+      <hr class="specialHr">
+
       </div>
     </div>
   </div>
