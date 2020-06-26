@@ -52,22 +52,37 @@ get_header(); ?>
     <div class="row">
       <div class="col-lg-12">
 
-     <?php comment_form(); ?>
-
-      <?php
-        $args = array(
-            'date_query' => array(
-                'after' => '26 weeks ago',
-                'before' => 'tomorrow',
-                'inclusive' => true,
-                'title_reply' => __( 'Ask a Question or Comment', 'skeleton-starter' ),
-            ),
-        );
-         
-        $comments = get_comments( $args );
-        foreach ( $comments as $comment ) {
+        <hr class="specialHr">
+        
+        <?php
+        if (comments_open()){
+           comments_template();
         }
-      ?>
+
+        if (have_comments()) :
+
+        endif;?>
+
+        <hr class="specialHr">
+
+    <?php function comment_form_tweaks ($fields) {
+    //add placeholders and remove labels
+    $fields['author'] = '<input id="author" name="author" value="" placeholder="Name*" size="30" maxlength="245" required="required" type="text">';
+
+    $fields['email'] = '<input id="email" name="email" type="email" value="" placeholder="Email*" size="30" maxlength="100" aria-describedby="email-notes" required="required">'; 
+
+    //unset comment so we can recreate it at the bottom
+    unset($fields['comment']);
+
+    $fields['comment'] = '<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" placeholder="Comment*" required="required"></textarea>';
+
+    //remove website
+    unset($fields['url']);
+
+    return $fields;
+    }
+
+     ?>
 
       </div>
     </div>
